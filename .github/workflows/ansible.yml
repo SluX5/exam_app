@@ -39,12 +39,12 @@ jobs:
             host=${host//'ec2_endpoint = "'}
             host=${host//'"'}
             echo $host >> ansible/hosts
-            echo "$SSH" > ansible/slux.pem
-            chmod 400 ansible/slux.pem
-            cat ansible/slux.pem
+            echo "$SSH" > ansible/slux2.pem
+            chmod 400 ansible/slux2.pem
+            cat ansible/slux2.pem
       - name: Ansible
         uses: saubermacherag/ansible-playbook-docker-action@v1.3
         with:
           playbookName: 'ansible/Deploy.yml'
           inventoryFile: 'ansible/hosts'
-          keyFile: 'ansible/slux.pem'
+          keyFile: 'ansible/slux2.pem'
