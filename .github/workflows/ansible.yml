@@ -45,6 +45,6 @@ jobs:
       - name: Ansible
         uses: saubermacherag/ansible-playbook-docker-action@v1.3
         with:
-          playbookName: 'ansible/Deploy.yml'
+          playbookName: 'ansible/deploy.yml'
           inventoryFile: 'ansible/hosts'
           keyFile: 'ansible/slux2.pem'

@@ -1,4 +1,4 @@
-- name: exam
+- name: slux_exam
   gather_facts: false
   hosts: [all]
   become: yes
