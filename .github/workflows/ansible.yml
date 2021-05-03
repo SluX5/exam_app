@@ -42,6 +42,7 @@ jobs:
             echo "$SSH" > ansible/slux2.pem
             chmod 400 ansible/slux2.pem
             cat ansible/slux2.pem
+
       - name: Ansible
         uses: saubermacherag/ansible-playbook-docker-action@v1.3
         with:
