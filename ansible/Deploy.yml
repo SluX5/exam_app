@@ -1,0 +1,15 @@
+- name: exam
+  gather_facts: false
+  hosts: [all]
+  become: yes
+
+  tasks:
+
+    - name: Create exam
+      docker_container:
+        name: exam
+        image: slux5/less2:v1
+        pull: true
+        state: started
+        ports:
+          - "80:80"
